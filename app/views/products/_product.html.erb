@@ -1,37 +1,6 @@
 <div id="<%= dom_id product %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= product.name %>
+    <%= product.as_json %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Kinds:</strong>
-    <%= product.kinds %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Prices:</strong>
-    <%= product.prices %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Images:</strong>
-    <%= product.images %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Descriptions:</strong>
-    <%= product.descriptions %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Maker:</strong>
-    <%= product.maker %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this product", product, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this product', edit_product_path(product), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
 </div>
