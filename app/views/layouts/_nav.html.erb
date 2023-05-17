@@ -1,11 +1,14 @@
-<nav class='container mx-auto pt-6 px-12 font-inter text-red-600 flex justify-between'>
-	<div class='flex flex-col gap-4'>
-		<%= image_tag('index/logo.png', class:'w-[300px] h-[100px]') %>
-		<p class='text-large font-light mb-4 tracking-wider'>Blending the ageless wisdom of traditional rigging with modern applications and materials.</p>
-	</div>
-	<div class='flex text-xl font-bold gap-4'>
-		<%= link_to 'Store', home_store_path, class:'flex my-2 hover:text-red-300' %>
-		<%= link_to 'Rigging', home_rigging_path, class:'flex my-2 hover:text-red-300' %>
-		<%= link_to 'Education', home_education_path, class:'flex my-2 hover:text-red-300' %>
-	</div>
-</nav>
+<div data-controller='nav' class="w-full sticky top-0">
+	<nav class='w-full pt-6 px-24 font-inter text-red-900 flex justify-between md:justify-around transition-all ease-in-out duration-400 bg-white' data-nav-target='top'>
+		<div class='flex flex-col gap-4'>
+			<%= image_tag('index/logo.png', class:'w-[300px] h-auto') %>
+			<p class='text-large font-light mb-4 tracking-wider transition-all ease-in-out duration-400' data-nav-target="subtitle">Blending the ageless wisdom of traditional rigging with modern applications and materials.</p>
+		</div>
+		<div class='flex text-xl tracking-wider gap-12 invisible md:visible w-0 md:w-auto transition-all ease-in-out duration-400' data-nav-target='nav'>
+			<%= link_to 'Store', home_store_path, class:'flex my-2 hover:text-red-300' %>
+			<%= link_to 'Rigging', home_rigging_path, class:'flex my-2 hover:text-red-300' %>
+			<%= link_to 'Education', home_education_path, class:'flex my-2 hover:text-red-300' %>
+		</div>
+		<div data-nav-target="scrollcount" class="hidden">0</div>
+	</nav>
+</div>
