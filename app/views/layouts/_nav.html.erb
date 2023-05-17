@@ -1,9 +1,9 @@
-<nav class='container mx-auto py-4 px-12 h-40 font-inter text-red-600'>
-	<div class='flex flex-col align-bottom gap-2 w-[60vw]'>
-		<%= image_tag('index/logo.png', class:'object-contain') %>
-		<p class='text-xl'>Blending the ageless wisdom of traditional rigging with modern applications and materials.</p>
+<nav class='container mx-auto pt-6 px-12 font-inter text-red-600 flex justify-between'>
+	<div class='flex flex-col gap-4'>
+		<%= image_tag('index/logo.png', class:'w-[300px] h-[100px]') %>
+		<p class='text-large font-light mb-4 tracking-wider'>Blending the ageless wisdom of traditional rigging with modern applications and materials.</p>
 	</div>
-	<div class='flex justify-end align-top gap-4 no-underline w-[40vw] text-3xl'>
+	<div class='flex text-xl font-bold gap-4'>
 		<%= link_to 'Store', home_store_path, class:'flex my-2 hover:text-red-300' %>
 		<%= link_to 'Rigging', home_rigging_path, class:'flex my-2 hover:text-red-300' %>
 		<%= link_to 'Education', home_education_path, class:'flex my-2 hover:text-red-300' %>
