@@ -11,19 +11,15 @@ export default class extends Controller {
     window.addEventListener("scroll", function(event){
       if(window.scrollY == 0) {
         self.topTarget.classList.remove(navcolor);
-        self.topTarget.classList.add('bg-white');
         self.subtitleTarget.classList.remove('hidden');
-        self.navTarget.classList.remove('hidden');
       }
 
       self.scrollcountTarget.value++;
       if(self.scrollcountTarget.value > 5) self.scrollcountTarget.value = 0;
 
-      if(window.scrollY > 0 && self.scrollcountTarget.value == 0) {
-        self.topTarget.classList.remove('bg-white');
+      if(window.scrollY > 50 && self.scrollcountTarget.value == 0) {
         self.topTarget.classList.add(navcolor);
         self.subtitleTarget.classList.add('hidden');
-        self.navTarget.classList.add('hidden');
       } 
     });
 
