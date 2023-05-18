@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = [ 'top', 'subtitle', 'nav', 'scrollcount' ]
 
   connect() {
-    var navcolor = 'bg-zinc-500/50';
+    var navcolor = 'bg-zinc-500/80';
     let self = this;
     this.scrollcountTarget.value = 0;
 
