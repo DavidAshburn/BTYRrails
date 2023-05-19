@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     var navcolor = 'bg-zinc-500/80';
     let self = this;
-    this.scrollcountTarget.value = 0;
+    this.scrollcount = 0;
 
     window.addEventListener("scroll", function(event){
       if(window.scrollY == 0) {
@@ -14,10 +14,10 @@ export default class extends Controller {
         self.subtitleTarget.classList.remove('hidden');
       }
 
-      self.scrollcountTarget.value++;
-      if(self.scrollcountTarget.value > 5) self.scrollcountTarget.value = 0;
+      self.scrollcount++;
+      if(self.scrollcount > 5) self.scrollcount = 0;
 
-      if(window.scrollY > 50 && self.scrollcountTarget.value == 0) {
+      if(window.scrollY > 50 && self.scrollcount == 0) {
         self.topTarget.classList.add(navcolor);
         self.subtitleTarget.classList.add('hidden');
       } 
