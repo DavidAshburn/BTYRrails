@@ -34,7 +34,7 @@
 </div>
 
 <script>
-  setTimeout(this.showSlides, 5000);
+  setTimeout(showSlides, 9000);
 
   function showSlides() {
     let i;
@@ -47,6 +47,6 @@
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
     
-    setTimeout(showSlides, 5000);
+    setTimeout(showSlides, 9000);
   }
 </script>

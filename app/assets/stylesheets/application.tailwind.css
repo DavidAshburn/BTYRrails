@@ -26,7 +26,7 @@
   inset: 0;
   opacity: 0;
   z-index: -10;
-  transition: 200ms opacity ease-in-out;
+  transition: 2000ms opacity ease-in-out;
   transition-delay: 200ms;
 }
 
@@ -43,54 +43,53 @@
   object-position: center;
 }
 
-.carousel-button {
-  position: absolute;
-  background: none;
-  border: none;
-  font-size: 4rem;
-  top: 50%;
-  z-index: 20;
-  transform: translateY(-50%);
-  color: rgba(255,255,255,.5);
-  cursor: pointer;
-  border-radius: .25rem;
-  padding: 0 .5rem;
-  background-color: rgba(0,0,0,.1);
-}
-
-.carousel-button:hover,
-.carousel-button:focus {
-  color: white;
-  background-color: rgba(0,0,0,.2);
-}
-
-.carousel-button:focus {
-  outline: 1px solid black;
-}
-
-.carousel-button.prev {
-  left: 1rem;
-}
-
-.carousel-button.next {
-  right: 1rem;
-}
-
 .scissor {
   background-image:
-    linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)),url('index/scissors.jpg');
+    linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0)),url('index/scissors.jpg');
 }
 
 .funwale {
   background-image:
-    linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)),url('index/gunwale.jpg');
+    linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0)),url('index/gunwale.jpg');
 }
 
 .teamup {
   background-image:
-    linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)),url('index/teamup.jpg');
+    linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0)),url('index/teamup.jpg');
 }
 
+.rig-1 {
+  background-image: url('rigging/sails.jpg');
+}
 
+.rig-1:hover,
+.rig-1:focus {
+  backdrop-filter: grayscale(100%);
+}
 
+.rig-2 {
+  background-image: url('rigging/watchman.jpg');
+}
 
+.rig-2:hover,
+.rig-2:focus {
+  
+}
+
+.rig-3 {
+  background-image: url('rigging/juggingup.jpg');
+}
+
+.rig-3:hover,
+.rig-3:focus {
+  
+}
+
+.rig-4 {
+  background-image: url('rigging/bow.jpg');
+}
+
+.rig-4:hover,
+.rig-4:focus {
+  
+}
