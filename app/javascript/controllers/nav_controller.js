@@ -6,11 +6,13 @@ export default class extends Controller {
   connect() {
     var navcolor = 'bg-zinc-400/40';
     let self = this;
-    this.scrollcount = 0;
+    this.scrollcount = false;
+
     this.logoTarget = document.getElementById('logo');
 
     window.addEventListener('scroll', function (event) {
       if (window.scrollY == 0) {
+        this.scrollcount = false;
         self.topTarget.classList.remove(navcolor);
         self.topTarget.classList.remove('backdrop-blur-lg');
         self.logoTarget.classList.remove('w-[150px]');
@@ -18,16 +20,23 @@ export default class extends Controller {
         self.subtitleTarget.classList.remove('hidden');
       }
 
-      self.scrollcount++;
-      if (self.scrollcount > 5) self.scrollcount = 0;
+      if (window.scrollY > 50) {
+        if (!this.scrollcount) {
+          self.topTarget.classList.add(navcolor);
+          self.topTarget.classList.add('backdrop-blur-lg');
+          self.logoTarget.classList.add('w-[150px]');
+          self.logoTarget.classList.remove('w-[300px]');
+          self.subtitleTarget.classList.add('hidden');
+        }
 
-      if (window.scrollY > 50 && self.scrollcount == 0) {
-        self.topTarget.classList.add(navcolor);
-        self.topTarget.classList.add('backdrop-blur-lg');
-        self.logoTarget.classList.add('w-[150px]');
-        self.logoTarget.classList.remove('w-[300px]');
-        self.subtitleTarget.classList.add('hidden');
+        if (!this.scrollcount) {
+          this.scrollcount = true;
+        }
       }
     });
+
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   }
 }
