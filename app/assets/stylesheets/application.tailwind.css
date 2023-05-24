@@ -5,8 +5,13 @@
 
 
 @layer components {
-  .btn-grey {
-    @apply py-4 px-10 mx-auto text-center bg-zinc-400 rounded-full font-inter font-bold text-white focus:text-gray-300 cursor-default;
+
+  .btn-red {
+    @apply py-4 px-10 hover:px-14 transition-all duration-500 ease-in-out mx-auto text-center bg-red-600 hover:bg-red-500 rounded-full font-inter font-bold text-white focus:text-gray-200 cursor-default;
+  }
+
+  .narrow {
+    @apply px-16 md:px-24 lg:px-40;
   }
 }
 
@@ -73,7 +78,7 @@
 
 .rig-2:hover,
 .rig-2:focus {
-  
+
 }
 
 .rig-3 {
@@ -82,7 +87,7 @@
 
 .rig-3:hover,
 .rig-3:focus {
-  
+
 }
 
 .rig-4 {
@@ -91,5 +96,5 @@
 
 .rig-4:hover,
 .rig-4:focus {
-  
+
 }
