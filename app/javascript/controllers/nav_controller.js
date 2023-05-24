@@ -22,25 +22,25 @@ export default class extends Controller {
         self.topTarget.classList.remove('backdrop-blur-lg');
         self.logoTarget.classList.remove('w-[150px]');
         self.logoTarget.classList.add('w-[300px]');
-        self.subtitleTarget.classList.remove('hidden');
+        self.subtitleTarget.classList.remove('h-0');
         self.subtitleTarget.classList.remove('invisible');
       }
 
-      if (window.scrollY > 50) {
-        if (!this.scrollcount) {
-          self.subtitleTarget.classList.add('invisible');
-        }
+      if (window.scrollY > 10) {
+        self.subtitleTarget.classList.add('invisible');
       }
 
-      if (window.scrollY > 120) {
+      if (window.scrollY > 90) {
         self.topTarget.classList.add(this.navcolor);
         self.topTarget.classList.add('backdrop-blur-lg');
+        self.subtitleTarget.classList.add('invisible');
         self.logoTarget.classList.add('w-[150px]');
         self.logoTarget.classList.remove('w-[300px]');
-        self.subtitleTarget.classList.add('hidden');
-
+        self.subtitleTarget.classList.add('h-0');
         this.scrollcount = true;
       }
+
+      this.lastY = window.scrollY;
     });
   }
 }
