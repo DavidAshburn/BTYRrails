@@ -7,4 +7,6 @@ class HomeController < ApplicationController
   end
   def rigging
   end
+  def services
+  end
 end
